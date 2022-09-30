@@ -1,0 +1,19 @@
+{
+  "name": "djs-template-bot",
+  "version": "1.0.0",
+  "description": "Template bot for discordjs package",
+  "main": "node src/bot.js",
+  "scripts": {
+    "test": "node src/bot.js"
+  },
+  "author": "SmirkLobster",
+  "license": "ISC",
+  "devDependencies": {
+    "@discordjs/rest": "^1.2.0",
+    "axios": "^0.27.2",
+    "dayjs": "^1.11.5",
+    "discord.js": "^14.5.0",
+    "dotenv": "^16.0.3",
+    "eslint": "^8.24.0"
+  }
+}
