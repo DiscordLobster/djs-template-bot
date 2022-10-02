@@ -18,7 +18,7 @@ module.exports = {
 
             try {
                 await command.execute(interaction, client);
-                logger.write(`[${dateFormat}] ${interaction.user.tag} used ${commandName} in ${interaction.channel.name}`);
+                logger.write(`[${dateFormat}] ${interaction.user.tag} used /${commandName} in #${interaction.channel.name}\n`);
             }
             catch (err) {
                 console.error(err);
