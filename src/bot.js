@@ -3,7 +3,13 @@
 require('dotenv').config();
 const { readdirSync } = require('fs');
 const { Client, GatewayIntentBits, Collection } = require('discord.js');
-const client = new Client({ intents: [GatewayIntentBits.Guilds] });
+const client = new Client({
+  intents: [
+    GatewayIntentBits.Guilds,
+    GatewayIntentBits.MessageContent,
+    GatewayIntentBits.GuildMembers,
+  ],
+});
 
 // Local caches for the bot components
 client.commands = new Collection();
