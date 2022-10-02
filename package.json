@@ -4,7 +4,8 @@
   "description": "Template bot for discordjs package",
   "main": "node src/bot.js",
   "scripts": {
-    "test": "node src/bot.js"
+    "test": "node src/bot.js",
+    "build:guildcommands": "node bin/client/deployGuildCommands.js"
   },
   "author": "SmirkLobster",
   "license": "ISC",

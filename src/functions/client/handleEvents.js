@@ -1,6 +1,6 @@
 const { readdirSync } = require('fs');
 
-module.export = (client) => {
+module.exports = (client) => {
     client.handleEvents = () => {
         const eventFolders = readdirSync('./src/events');
         for (const folder of eventFolders) {

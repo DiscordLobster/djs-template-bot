@@ -1,3 +1,5 @@
+'use strict';
+
 require('dotenv').config();
 const { readdirSync } = require('fs');
 const { Client, GatewayIntentBits, Collection } = require('discord.js');
@@ -9,14 +11,18 @@ client.buttons = new Collection();
 client.menus = new Collection();
 client.modals = new Collection();
 
-// Switch statement to require various functions
+// Read the functions directory in a synchronous order
 const functionFolders = readdirSync('./src/functions');
+
+// Create a for..loop for each folder in the directory
 for (const folder of functionFolders) {
-  const functionFiles = readdirSync(`./src/functions/${folder}`).filter(
-    (file) => file.endsWith('.js'),
-  );
+  // Filter the functions down to js files
+  const functionFiles = readdirSync(`./src/functions/${folder}`).filter(file => file.endsWith('.js'));
+
+  // Create a switch statement for each folder in the functions directory
   switch (folder) {
     case 'client':
+      // For each file in 'functions/client' it'll require the module with the client attached as a property
       for (const file of functionFiles) {
         require(`./functions/${folder}/${file}`)(client);
       }
@@ -32,6 +38,9 @@ client.syncCommands();
 
 // Go to './src/functions/client/handleEvents.js' to learn more
 client.handleEvents();
+
+// Go to './src/functions/client/syncComponents.js' to learn more
+client.syncComponents();
 
 // Puts the bot matching the token into an online state
 client.login(process.env.BOT_TOKEN);

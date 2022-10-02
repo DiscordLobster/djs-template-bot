@@ -6,7 +6,7 @@ module.exports = (client) => {
         const commandFolders = readdirSync('./src/commands');
         for (const folder of commandFolders) {
             const commandFiles = readdirSync(`./src/commands/${folder}`).filter(file => file.endsWith('.js'));
-            for (const file in commandFiles) {
+            for (const file of commandFiles) {
                 const command = require(`../../commands/${folder}/${file}`);
                 commands.set(command.data.name, command);
                 console.log('Synced %d to command cache', command.data.name);
