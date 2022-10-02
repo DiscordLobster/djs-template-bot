@@ -1,8 +1,8 @@
 const { createWriteStream } = require('fs');
-const logger = createWriteStream('./src/logs/commands.log', { flags: 'a' });
-// const buttonLogger = createWriteStream('./src/logs/buttons.logs', { flags: 'a' });
-// const menuLogger = createWriteStream('./src/logs/menus.log', { flags: 'a' });
-// const modalLogger = createWriteStream('./src/logs/modals.log', { flags: 'a' });
+const logger = createWriteStream('./src/logs/commands.txt', { flags: 'a' });
+// const buttonLogger = createWriteStream('./src/logs/buttons.txt', { flags: 'a' });
+// const menuLogger = createWriteStream('./src/logs/menus.txt', { flags: 'a' });
+// const modalLogger = createWriteStream('./src/logs/modals.txt', { flags: 'a' });
 const dayjs = require('dayjs');
 
 module.exports = {
