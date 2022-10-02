@@ -126,17 +126,15 @@ To see an example project on how to deploy your bot, please see my own configura
 
 ## ⛏️ Built Using <a name = "built_using"></a>
 
-- [PRAW](https://praw.readthedocs.io/en/latest/) - Python Reddit API Wrapper
-- [Heroku](https://www.heroku.com/) - SaaS hosting platform
+- [discord.js](https://github.com/discordjs/discord.js/) - API Wrapper for interacting with the Discord API
 
 ## ✍️ Authors <a name = "authors"></a>
 
-- [@kylelobo](https://github.com/kylelobo) - Idea & Initial work
+- [@DiscordLobster](https://github.com/DiscordLobster) - Idea & Initial work
 
-See also the list of [contributors](https://github.com/kylelobo/The-Documentation-Compendium/contributors) who participated in this project.
+See also the list of [contributors](https://github.com/DiscordLobster/djs-template-bot/contributors) who participated in this project.
 
 ## 🎉 Acknowledgements <a name = "acknowledgement"></a>
 
-- Hat tip to anyone whose code was used
-- Inspiration
-- References
+- [axios](https://github.com/axios/axios) - Promised based HTTP client for node.js
+- [dayjs](https://github.com/iamkun/dayjs) - Immutable date-time library with modern API
